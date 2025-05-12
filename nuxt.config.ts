@@ -29,11 +29,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      titleTemplate: '%s %separator %siteName',
-      templateParams: {
-        separator: '•',
-        siteName: 'yusql',
-      },
+      titleTemplate: '%s • yusql',
       htmlAttrs: {
         lang: 'en',
       },
