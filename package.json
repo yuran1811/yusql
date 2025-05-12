@@ -1,0 +1,63 @@
+{
+  "name": "yusql",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.8.0",
+  "description": "Self-host SQL interactive editor",
+  "author": "yuran1811",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "nuxt dev",
+    "analyze": "nuxt analyze --no-serve",
+    "clean": "nuxt cleanup",
+    "up": "nuxt upgrade --dedupe",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "nuxt prepare",
+    "bump": "bumpp",
+    "lint": "eslint ./app ./server ./*.ts",
+    "lint:fix": "eslint ./app ./server ./*.ts --fix"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.13.0",
+    "@iconify-json/lucide": "^1.2.41",
+    "@nuxt/eslint": "^1.3.0",
+    "@nuxt/image": "1.10.0",
+    "@nuxt/ui": "^3.1.1",
+    "@nuxtjs/mdc": "^0.17.0",
+    "@pinia/nuxt": "0.11.0",
+    "@types/better-sqlite3": "^7.6.13",
+    "@vueuse/nuxt": "^13.1.0",
+    "@vueuse/router": "^13.1.0",
+    "better-sqlite3": "^11.10.0",
+    "bumpp": "^10.1.0",
+    "eslint": "^9.26.0",
+    "eslint-config-prettier": "^10.1.5",
+    "monaco-editor": "^0.52.2",
+    "nuxt": "^3.17.2",
+    "nuxt-monaco-editor": "1.3.1",
+    "nuxt-svgo": "^4.1.0",
+    "pinia": "^3.0.2",
+    "postcss-nested": "^7.0.2",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "@tailwindcss/oxide",
+      "better-sqlite3",
+      "sharp",
+      "unrs-resolver"
+    ],
+    "ignoredBuiltDependencies": [
+      "esbuild",
+      "vue-demi"
+    ]
+  }
+}

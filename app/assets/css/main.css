@@ -1,0 +1,265 @@
+@import 'tailwindcss' theme(static);
+@import '@nuxt/ui';
+
+@theme {
+  --font-heading: 'Montserrat', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+
+  --color-primary: var(--ui-color-primary-500);
+  --color-secondary: var(--ui-color-secondary-500);
+  --color-success: var(--ui-color-success-500);
+  --color-info: var(--ui-color-info-500);
+  --color-warning: var(--ui-color-warning-500);
+  --color-error: var(--ui-color-error-500);
+
+  --breakpoint-ss: 384px;
+  --breakpoint-xs: 512px;
+  --breakpoint-4xl: 896px;
+
+  --gd-to-top: to top in oklab;
+  --gd-to-bottom: to bottom in oklab;
+
+  --gd-bg1: linear-gradient(
+    43deg,
+    oklch(0.792 0.209 151.711) 0%,
+    oklch(0.596 0.145 163.225) 46%,
+    oklch(0.704 0.14 182.503) 100%
+  );
+  --gd-bg2: linear-gradient(
+    43deg,
+    rgb(65, 88, 208) 0%,
+    rgb(200, 80, 192) 46%,
+    rgb(255, 204, 112) 100%
+  );
+
+  --animate-aurora: aurora var(--duration, 6s) ease-out infinite;
+  @keyframes aurora {
+    0% {
+      background-position: 50% 0;
+    }
+    25% {
+      background-position: 100% 50%;
+    }
+    50% {
+      background-position: 50% 100%;
+    }
+    75% {
+      background-position: 0 50%;
+    }
+    to {
+      background-position: 50% 0;
+    }
+  }
+
+  --animate-breath: breath var(--duration, 3s) ease-in-out
+    calc(var(--i, 0) * 0.2s) infinite;
+  @keyframes breath {
+    0%,
+    to {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.4;
+    }
+  }
+
+  --animate-pattern: pattern 150s linear infinite;
+  @keyframes pattern {
+    from {
+      background-position:
+        0px 220px,
+        3px 220px,
+        151.5px 337.5px,
+        25px 24px,
+        28px 24px,
+        176.5px 150px,
+        50px 16px,
+        53px 16px,
+        201.5px 91px,
+        75px 224px,
+        78px 224px,
+        226.5px 350.5px,
+        100px 19px,
+        103px 19px,
+        251.5px 121px,
+        125px 120px,
+        128px 120px,
+        276.5px 187px,
+        150px 31px,
+        153px 31px,
+        301.5px 120.5px,
+        175px 235px,
+        178px 235px,
+        326.5px 384.5px,
+        200px 121px,
+        203px 121px,
+        351.5px 228.5px,
+        225px 224px,
+        228px 224px,
+        376.5px 364.5px,
+        250px 26px,
+        253px 26px,
+        401.5px 105px,
+        275px 75px,
+        278px 75px,
+        426.5px 180px;
+    }
+    to {
+      background-position:
+        0px 6800px,
+        3px 6800px,
+        151.5px 6917.5px,
+        25px 13632px,
+        28px 13632px,
+        176.5px 13758px,
+        50px 5416px,
+        53px 5416px,
+        201.5px 5491px,
+        75px 17175px,
+        78px 17175px,
+        226.5px 17301.5px,
+        100px 5119px,
+        103px 5119px,
+        251.5px 5221px,
+        125px 8428px,
+        128px 8428px,
+        276.5px 8495px,
+        150px 9876px,
+        153px 9876px,
+        301.5px 9965.5px,
+        175px 13391px,
+        178px 13391px,
+        326.5px 13540.5px,
+        200px 14741px,
+        203px 14741px,
+        351.5px 14848.5px,
+        225px 18770px,
+        228px 18770px,
+        376.5px 18910.5px,
+        250px 5082px,
+        253px 5082px,
+        401.5px 5161px,
+        275px 6375px,
+        278px 6375px,
+        426.5px 6480px;
+    }
+  }
+
+  --animate-ripple: ripple var(--duration, 2s) ease calc(var(--i, 0) * 0.2s)
+    infinite;
+  @keyframes ripple {
+    0%,
+    to {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+  }
+}
+
+@utility flex-center {
+  @apply flex items-center justify-center;
+}
+@utility flex-center-col {
+  @apply flex-center flex-col;
+}
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  @apply !select-none;
+
+  &::-webkit-scrollbar {
+    @apply bg-muted rounded-2xl;
+  }
+  &::-webkit-scrollbar:vertical {
+    @apply w-1;
+  }
+  &::-webkit-scrollbar:horizontal {
+    @apply h-1;
+  }
+  &::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-2xl;
+  }
+}
+
+html {
+  @apply bg-default text-default;
+}
+
+body {
+  @apply !p-0;
+}
+
+.aurora-text {
+  @apply animate-aurora scale-120 bg-gradient-to-br from-[#FF9C03] via-[#A78BFA] to-[#00A2E5] bg-size-[200%] bg-clip-text font-black tracking-wide text-transparent duration-75;
+}
+
+.no-scrollbar::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar-thumb {
+  @apply !size-0;
+}
+
+.absolute-center-h {
+  @apply left-1/2 -translate-x-1/2 transform;
+}
+.absolute-center-v {
+  @apply top-1/2 -translate-y-1/2 transform;
+}
+
+.totop {
+  @apply text-toned fixed right-2.5 bottom-16 z-100 size-12 -translate-x-3.5 cursor-pointer xl:right-1/5;
+
+  &:hover {
+    @apply before:sm:rotate-z-0 after:sm:rotate-z-0;
+  }
+  &::after,
+  &::before {
+    @apply absolute bottom-2.5 h-[3.75px] w-6 rounded-[1.75px] bg-current transition-all duration-200 content-[""];
+  }
+  &::after {
+    @apply left-[4.75px];
+    transform: rotateZ(-225deg);
+  }
+  &::before {
+    @apply right-[4.75px];
+    transform: rotateZ(225deg);
+  }
+}
+
+.dock {
+  @apply max-xs:hidden fixed bottom-6 left-1/2 z-100 flex h-16 -translate-x-1/2 items-end gap-4 rounded-[22px] p-2 transition before:absolute before:inset-0 before:opacity-30 before:content-[""] hover:brightness-110 hover:before:opacity-80 before:sm:blur-xl;
+  /* &,
+  &::before {
+    @apply bg-(image:--gd-bg1);
+  } */
+
+  img {
+    @apply rounded-[16px] transition;
+  }
+
+  .opened {
+    @apply relative;
+
+    &::after {
+      @apply absolute -bottom-1 left-1/2 size-1 -translate-x-1/2 rounded-full bg-white content-[""];
+    }
+  }
+
+  [data-tooltip] {
+    @apply relative;
+
+    &::before {
+      @apply text-muted border-muted bg-default pointer-events-none invisible absolute top-[-40px] left-1/2 w-max min-w-10 -translate-x-1/2 rounded-xl border-2 px-2 py-1 text-center font-semibold whitespace-nowrap opacity-0 duration-250 content-[attr(data-tooltip)];
+    }
+
+    &:hover::before {
+      @apply visible opacity-100;
+    }
+  }
+}
