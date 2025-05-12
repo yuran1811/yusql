@@ -1,3 +1,3 @@
 export default defineEventHandler(() => {
-  return { msg: 'from /hello [POST]' };
+  return { msg: 'from /healthz [GET]' };
 });
