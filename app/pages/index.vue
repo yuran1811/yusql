@@ -31,7 +31,7 @@ watchDebounced(
 
 <template>
   <div
-    class="grid h-full grid-cols-1 *:max-h-[calc(100dvh-13rem)] sm:grid-cols-2"
+    class="container mx-auto grid overflow-hidden *:h-full *:outline-none *:max-sm:h-72 sm:h-screen sm:max-h-[calc(100dvh-11rem)] sm:grid-cols-2"
   >
     <MonacoEditor
       v-model="text"
@@ -64,7 +64,7 @@ watchDebounced(
       v-if="status === 'success' && data?.result"
       sticky
       :data="data?.result"
-      class="h-full"
+      class=""
     />
   </div>
 </template>
