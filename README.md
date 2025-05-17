@@ -13,12 +13,12 @@
 </p>
 
 <div align="center">
-  <a href="https://yusql.vercel.app" target="_blank">Official Link</a>
+  <a href="https://yusql.onrender.com" target="_blank">Official Link</a>
 </div>
 
 ## Tech Stack
 
-<img src="https://skill-icons-livid.vercel.app/icons?i=nuxt,tailwind,ts&gap=60" height="36" />
+<img src="https://skill-icons-livid.vercel.app/icons?i=nuxt,tailwind,ts,sqlite&gap=60" height="36" />
 
 ## Screenshots
 

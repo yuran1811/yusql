@@ -5,7 +5,10 @@ export const usePages = () => {
   const routes = router
     .getRoutes()
     .filter(
-      (route) => !['index', 'about', 'cheatsheet', 'all'].includes(route.name as string),
+      (route) =>
+        !['index', 'about', 'references', 'all'].includes(
+          route.name as string,
+        ) && !(route.name as string).includes('slug'),
     );
 
   const categorizedRoutes = routes.reduce(
@@ -63,20 +66,14 @@ export const usePages = () => {
           slot: 'main' as const,
         },
         {
-          label: 'Cheatsheet',
+          label: 'References',
           icon: 'lucide:book-open-text',
-          to: '/cheatsheet',
+          to: '/references',
           slot: 'main' as const,
         },
         ...Object.values(categorizedRoutes),
       ],
-      [
-        {
-          title: 'Settings',
-          icon: 'lucide:settings',
-          slot: 'settings' as const,
-        },
-      ],
+      [],
     ],
   };
 };

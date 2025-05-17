@@ -9,6 +9,7 @@ onMounted(() => {
 
 <template>
   <div
+    data-allow-mismatch="class"
     class="pointer-events-none fixed top-0 left-0 z-200 h-screen w-screen"
     :class="{
       hidden: hideCursor,
