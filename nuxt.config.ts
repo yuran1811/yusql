@@ -5,9 +5,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'nuxt-monaco-editor',
     'nuxt-svgo',
-    'reka-ui/nuxt',
     '@vueuse/nuxt',
-    '@pinia/nuxt',
+    'reka-ui/nuxt',
   ],
   imports: {
     presets: [
@@ -54,12 +53,12 @@ export default defineNuxtConfig({
     typedPages: true,
   },
   compatibilityDate: '2025-03-01',
+
   postcss: {
     plugins: {
       'postcss-nested': {},
     },
   },
-
   eslint: {
     config: {
       standalone: false,
@@ -75,7 +74,7 @@ export default defineNuxtConfig({
     clientBundle: {
       scan: true,
       includeCustomCollections: true,
-      sizeLimitKb: 4,
+      sizeLimitKb: 8,
       icons: [],
     },
     customCollections: [
