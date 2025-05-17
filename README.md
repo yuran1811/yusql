@@ -23,8 +23,10 @@
 ## Screenshots
 
 <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-  <img src="" style="width:45%;max-width:380px">
-  <img src="" style="width:45%;max-width:380px">
+  <img src="public/screenshots/home.png" style="width:45%;max-width:380px">
+  <img src="public/screenshots/sql.png" style="width:45%;max-width:380px">
+  <img src="public/screenshots/about.png" style="width:45%;max-width:380px">
+  <img src="public/screenshots/refs.png" style="width:45%;max-width:380px">
 </div>
 
 ## Quick Start
