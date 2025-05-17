@@ -16,10 +16,12 @@ const { data, error, status } = useAsyncData('home', async () => {
 <template>
   <LayoutDefault>
     <div class="font-heading mb-8 space-y-4 py-8 *:text-center sm:mb-16">
-      <p class="text-2xl font-bold tracking-wide sm:text-5xl">yusql</p>
+      <p class="text-2xl font-bold tracking-wide sm:text-5xl">
+        yu<span class="aurora-text">sql</span>
+      </p>
       <p class="text-lg font-light sm:text-2xl">
         An ultimate
-        <span class="aurora-text">SQL</span> playground running in browser.
+        <span class="aurora-text">SQL playground</span> running in browser.
       </p>
     </div>
 
@@ -28,7 +30,10 @@ const { data, error, status } = useAsyncData('home', async () => {
         Choose any of below sample databases to start
       </p>
 
-      <USkeleton v-if="status === 'pending'" class="mx-auto size-100" />
+      <USkeleton
+        v-if="status === 'pending'"
+        class="mx-auto h-20 w-full max-w-150"
+      />
       <div v-else-if="status === 'error'">
         <div class="text-red-500">
           <p>Error: {{ error?.message }}</p>
